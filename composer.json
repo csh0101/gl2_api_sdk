@@ -1,0 +1,19 @@
+{
+    "name": "nears/gl2_api_sdk",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nears\\Gl2ApiSdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "csh0101",
+            "email": "1945598041@qq.com"
+        }
+    ],
+    "require": {
+      "ext-json": "*"
+    }
+}
