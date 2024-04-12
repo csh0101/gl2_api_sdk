@@ -14,7 +14,6 @@ class GL2APIUtils {
     // 使用cURL发送请求，并根据响应返回布尔值
     public static function verifyURIWithCurl($app, $uri) {
         $url = self::$apiHost . "/api/uri/app_uri/verify?app=" . $app . "&uri=" . $uri;
-
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
