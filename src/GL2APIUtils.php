@@ -6,10 +6,9 @@ class GL2APIUtils {
     public static $apiHost;
     public static $authorization;
 
-    // 从环境变量初始化静态成员变量
-    public static function init() {
-        self::$apiHost = getenv('GL2_WHITELIST_API_HOST');
-        self::$authorization = getenv('AUTHORIZATION');
+    public static function init($apiHost,$authorization) {
+        self::$apiHost = $apiHost;
+        self::$authorization = $authorization;
     }
 
     // 使用cURL发送请求，并根据响应返回布尔值
