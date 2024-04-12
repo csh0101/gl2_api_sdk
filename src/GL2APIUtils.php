@@ -15,7 +15,7 @@ class GL2APIUtils {
     public static function verifyURIWithCurl($app, $uri) {
         self::$apiHost = getenv('GL2_WHITELIST_API_HOST');
         self::$authorization = getenv('AUTHORIZATION');
-        $url = self::$apiHost . "/api/uri/app_uri/verify?app=" . urlencode($app) . "&uri=" . urlencode($uri);
+        $url = self::$apiHost . "/api/uri/app_uri/verify?app=" . $app . "&uri=" . $uri;
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
