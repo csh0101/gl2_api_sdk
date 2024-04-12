@@ -13,8 +13,6 @@ class GL2APIUtils {
 
     // 使用cURL发送请求，并根据响应返回布尔值
     public static function verifyURIWithCurl($app, $uri) {
-        self::$apiHost = getenv('GL2_WHITELIST_API_HOST');
-        self::$authorization = getenv('AUTHORIZATION');
         $url = self::$apiHost . "/api/uri/app_uri/verify?app=" . $app . "&uri=" . $uri;
 
         $ch = curl_init();
@@ -40,8 +38,6 @@ class GL2APIUtils {
 
     // 使用file_get_contents发送请求，并根据响应返回布尔值
     public static function verifyURIWithFileGetContents($app, $uri) {
-        self::$apiHost = getenv('GL2_WHITELIST_API_HOST');
-        self::$authorization = getenv('AUTHORIZATION');
         $url = self::$apiHost . "/api/uri/app_uri/verify?app=" . urlencode($app) . "&uri=" . urlencode($uri);
 
         $context = stream_context_create([
